@@ -1,0 +1,36 @@
+.cardStyle {
+  width: 350px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.inputStyle {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.btnStyle {
+  background-color: #ff385c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btnStyle:hover {
+  background-color: #e03150;
+}
+
+.bookingList {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}

@@ -1,0 +1,653 @@
+* {
+  box-sizing: border-box;
+}
+
+/* =========================================
+   PAGE
+========================================= */
+
+.add-house-page {
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #f5f7ff 0%,
+    #eef2ff 50%,
+    #f8fafc 100%
+  );
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.add-house-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  padding: 25px 15px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.add-house-card {
+  width: 100%;
+  max-width: 520px;
+
+  background: #ffffff;
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(226, 232, 240, 0.8);
+
+  box-shadow:
+    0 15px 35px rgba(15, 23, 42, 0.08),
+    0 4px 10px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.add-house-header {
+  text-align: center;
+
+  margin-bottom: 22px;
+}
+
+.add-house-header h2 {
+  margin: 0 0 6px;
+
+  color: #1e293b;
+
+  font-size: 25px;
+  font-weight: 700;
+
+  letter-spacing: -0.3px;
+}
+
+.add-house-header p {
+  margin: 0;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.house-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   FORM GROUP
+========================================= */
+
+.form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.form-group label {
+  color: #334155;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   REQUIRED STAR
+========================================= */
+
+.required {
+  color: #ef4444;
+
+  font-size: 15px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   NORMAL INPUTS
+========================================= */
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+
+  padding: 10px 12px;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  background: #f8fafc;
+
+  color: #1e293b;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   INPUT HOVER
+========================================= */
+
+.form-group input[type="text"]:hover,
+.form-group input[type="number"]:hover,
+.form-group textarea:hover {
+  border-color: #94a3b8;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+========================================= */
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus {
+  border-color: #6366f1;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.form-group textarea {
+  min-height: 90px;
+
+  resize: vertical;
+
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   PINCODE + RENT
+========================================= */
+
+.form-row {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 14px;
+}
+
+
+/* =========================================
+   COMBINED IMAGE INPUT
+========================================= */
+
+.image-input-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  box-sizing: border-box;
+
+  background: #f8fafc;
+
+  border: 1px solid #cbd5e1;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+/* =========================================
+   IMAGE WRAPPER FOCUS
+========================================= */
+
+.image-input-wrapper:focus-within {
+  border-color: #6366f1;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+
+/* =========================================
+   IMAGE URL INPUT
+========================================= */
+
+.image-input-wrapper input[type="text"] {
+  flex: 1;
+
+  min-width: 0;
+
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  padding: 10px 12px;
+
+  color: #1e293b;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.image-input-wrapper input[type="text"]::placeholder {
+  color: #94a3b8;
+}
+
+
+/* =========================================
+   DISABLED URL INPUT
+========================================= */
+
+.image-input-wrapper input[type="text"]:disabled {
+  background: #f1f5f9;
+
+  color: #64748b;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   UPLOAD BUTTON
+========================================= */
+
+.upload-btn {
+  flex-shrink: 0;
+
+  margin-right: 5px;
+
+  padding: 7px 11px;
+
+  border-radius: 6px;
+
+  background: #6366f1;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.upload-btn:hover {
+  background: #4f46e5;
+
+  transform: translateY(-1px);
+}
+
+.upload-btn:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================
+   SELECTED FILE
+========================================= */
+
+.selected-file {
+  margin: 4px 0 0;
+
+  padding: 7px 9px;
+
+  border-radius: 6px;
+
+  background: #f0fdf4;
+
+  border: 1px solid #bbf7d0;
+
+  color: #15803d;
+
+  font-size: 12px;
+
+  font-weight: 500;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   IMAGE HELP TEXT
+========================================= */
+
+.image-help {
+  display: block;
+
+  margin-top: -1px;
+
+  color: #94a3b8;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+}
+
+
+/* =========================================
+   ADD HOUSE BUTTON
+========================================= */
+
+.add-house-btn {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 8px;
+
+  padding: 11px 16px;
+
+  margin-top: 2px;
+
+  background: linear-gradient(
+    135deg,
+    #6366f1 0%,
+    #4f46e5 100%
+  );
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 5px 12px rgba(79, 70, 229, 0.2);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+/* =========================================
+   BUTTON HOVER
+========================================= */
+
+.add-house-btn:hover {
+  background: linear-gradient(
+    135deg,
+    #4f46e5 0%,
+    #4338ca 100%
+  );
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(79, 70, 229, 0.28);
+}
+
+
+/* =========================================
+   BUTTON CLICK
+========================================= */
+
+.add-house-btn:active {
+  transform: translateY(0);
+
+  box-shadow:
+    0 4px 8px rgba(79, 70, 229, 0.2);
+}
+
+
+/* =========================================
+   NUMBER INPUT
+========================================= */
+
+.form-group input[type="number"]::-webkit-inner-spin-button,
+.form-group input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0.6;
+}
+
+
+/* =========================================
+   VALIDATION
+========================================= */
+
+.form-group input:invalid:not(:placeholder-shown) {
+  border-color: #fca5a5;
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+.form-group input:focus-visible,
+.form-group textarea:focus-visible,
+.upload-btn:focus-visible,
+.add-house-btn:focus-visible {
+  outline: 2px solid #818cf8;
+
+  outline-offset: 2px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+
+  .add-house-container {
+    padding: 20px 12px;
+  }
+
+  .add-house-card {
+    max-width: 500px;
+
+    padding: 22px;
+
+    border-radius: 14px;
+  }
+
+  .add-house-header h2 {
+    font-size: 23px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .add-house-container {
+    padding: 15px 10px;
+  }
+
+  .add-house-card {
+    padding: 20px 16px;
+
+    border-radius: 12px;
+  }
+
+  .add-house-header {
+    margin-bottom: 20px;
+  }
+
+  .add-house-header h2 {
+    font-size: 22px;
+  }
+
+  .add-house-header p {
+    font-size: 12px;
+  }
+
+  .house-form {
+    gap: 14px;
+  }
+
+
+  /* =====================================
+     IMAGE INPUT MOBILE
+  ===================================== */
+
+  .image-input-wrapper {
+    flex-direction: column;
+
+    align-items: stretch;
+
+    padding: 4px;
+  }
+
+  .image-input-wrapper input[type="text"] {
+    width: 100%;
+
+    padding: 9px 10px;
+
+    font-size: 13px;
+  }
+
+  .upload-btn {
+    width: 100%;
+
+    margin: 0;
+
+    padding: 8px;
+
+    text-align: center;
+  }
+
+
+  /* =====================================
+     INPUTS MOBILE
+  ===================================== */
+
+  .form-group input[type="text"],
+  .form-group input[type="number"],
+  .form-group textarea {
+    padding: 9px 10px;
+
+    font-size: 13px;
+  }
+
+
+  /* =====================================
+     TEXTAREA MOBILE
+  ===================================== */
+
+  .form-group textarea {
+    min-height: 80px;
+  }
+
+
+  /* =====================================
+     BUTTON MOBILE
+  ===================================== */
+
+  .add-house-btn {
+    padding: 10px;
+
+    font-size: 14px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 350px) {
+
+  .add-house-card {
+    padding: 18px 13px;
+  }
+
+  .add-house-header h2 {
+    font-size: 20px;
+  }
+
+  .image-help {
+    font-size: 10px;
+  }
+}
+
